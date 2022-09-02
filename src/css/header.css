@@ -1,0 +1,19 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: 1px solid #8b32bbd3;
+}
+
+.header-container span {
+  font-weight: 600;
+  font-size: 18px;
+  color: black;
+  letter-spacing: 2px;
+}
+
+.header-container .links .link {
+  font-size: 22px;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+}

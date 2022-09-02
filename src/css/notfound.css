@@ -1,0 +1,35 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  padding: 20px;
+}
+
+.image-container img {
+  width: 300px;
+  height: 220px;
+  border-radius: 0.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 20px;
+}
+
+.content .link {
+  font-size: 22px;
+}
