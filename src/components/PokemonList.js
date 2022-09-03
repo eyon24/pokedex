@@ -26,14 +26,16 @@ const PokemonList = ({ pokemon }) => {
               return val;
             }
           })
-          .map((pokemon, index) => (
-            <div key={index} className="pokemon-card">
+          .map((pokemon) => (
+            <div key={pokemon.id} className="pokemon-card">
               <span className="pokemon-number">#{pokemon.id}</span>
               <img src={pokemon.sprites.front_default} alt={pokemon.name}></img>
               <h3 className="pokemon-name">{pokemon.name}</h3>
               <div className="types">
                 {pokemon.types.map((type) => (
-                  <p>{type.type.name}</p>
+                  <p key={`${pokemon.name}${type.type.name}`}>
+                    {type.type.name}
+                  </p>
                 ))}
               </div>
             </div>
