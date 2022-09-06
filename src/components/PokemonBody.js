@@ -1,4 +1,5 @@
 import useFetchPokemon from "./useFetchPokemon";
+import "../css/pokemondetails.css";
 
 const PokemonBody = (pokemon) => {
   const {
@@ -18,7 +19,12 @@ const PokemonBody = (pokemon) => {
     return body.flavor_text_entries.at(i).flavor_text;
   };
 
-  return <div>{body && <p>{getText()}</p>}</div>;
+  return (
+    <div className="pd-body">
+      <span>Description</span>
+      {body && <p>{getText()}</p>}
+    </div>
+  );
 };
 
 export default PokemonBody;

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import PokemonBody from "./PokemonBody";
 import useFetchPokemon from "./useFetchPokemon";
+import "../css/pokemondetails.css";
 
 const PokemonDetails = () => {
   const { name } = useParams();
@@ -22,27 +23,36 @@ const PokemonDetails = () => {
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {pokemon && (
-        <div className="pokemon-details-container">
-          <div className="pokemon-details-intro">
-            <h1>{pokemon.name}</h1>
-            <span>{pokemon.id}</span>
-            <div className="pokemon-details-types">
-              {pokemon.types.map((type) => (
-                <span key={type.type.name}>{type.type.name}</span>
-              ))}
+        <div className="pd-container">
+          <div className="pd-intro">
+            <h1>
+              {pokemon.name}
+              <span>#{pokemon.id}</span>
+            </h1>
+            <div className="pd-images">
+              <div className="pd-img-container">
+                {!shinyVisible && (
+                  <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+                )}
+                {shinyVisible && (
+                  <img src={pokemon.sprites.front_shiny} alt={pokemon.name} />
+                )}
+              </div>
+              <button onClick={handleToggle}>
+                {shinyVisible ? "Show Default" : "Show Shiny"}
+              </button>
             </div>
-            {!shinyVisible && (
-              <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-            )}
-            {shinyVisible && (
-              <img src={pokemon.sprites.front_shiny} alt={pokemon.name} />
-            )}
-            <button onClick={handleToggle}>
-              {shinyVisible ? "Show Default" : "Show Shiny"}
-            </button>
+            <div className="pd-types">
+              <span id="title">Type</span>
+              <div className="pd-type-list">
+                {pokemon.types.map((type) => (
+                  <span key={type.type.name}>{type.type.name}</span>
+                ))}
+              </div>
+            </div>
           </div>
-          <PokemonBody pokemon={pokemon} />
-          <div className="pokemon-details-stats">
+          <PokemonBody className="pd-body" pokemon={pokemon} />
+          <div className="pd-stats">
             {pokemon.stats.map((stat) => (
               <div key={stat.stat.name}>
                 <span>

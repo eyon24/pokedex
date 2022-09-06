@@ -1,0 +1,105 @@
+.pd-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+}
+
+.pd-container .pd-intro {
+  margin-top: 15px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pd-container.pd-intro h1,
+img,
+span,
+button {
+  margin-bottom: 10px;
+}
+
+.pd-container .pd-intro h1 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.pd-container .pd-intro h1 span {
+  margin-left: 10px;
+}
+
+.pd-container .pd-intro .pd-images .pd-img-container img {
+  width: 150px;
+  height: 150px;
+}
+
+.pd-container .pd-intro .pd-images button {
+  margin-bottom: 15px;
+  padding: 7px;
+  border-radius: 0.5rem;
+}
+
+.pd-container .pd-intro .pd-types {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pd-container .pd-intro .pd-types #title {
+  border-bottom: 1px solid purple;
+  padding-bottom: 10px;
+}
+
+.pd-container .pd-intro .pd-types .pd-type-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.pd-container .pd-body {
+  width: 80%;
+  text-align: center;
+}
+
+.pd-container .pd-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.pd-container .pd-body span {
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid purple;
+  letter-spacing: 2px;
+}
+
+.pd-container .pd-body p {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.pd-container .pd-stats {
+  border: 1px solid purple;
+  width: 80%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-radius: 0.5rem;
+}
+
+.pd-container .pd-stats span {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 400;
+}
