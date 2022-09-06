@@ -1,5 +1,6 @@
 import "../css/pokemonList.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const PokemonList = ({ pokemon }) => {
   const [search, setSearch] = useState("");
@@ -27,18 +28,27 @@ const PokemonList = ({ pokemon }) => {
             }
           })
           .map((pokemon) => (
-            <div key={pokemon.id} className="pokemon-card">
-              <span className="pokemon-number">#{pokemon.id}</span>
-              <img src={pokemon.sprites.front_default} alt={pokemon.name}></img>
-              <h3 className="pokemon-name">{pokemon.name}</h3>
-              <div className="types">
-                {pokemon.types.map((type) => (
-                  <p key={`${pokemon.name}${type.type.name}`}>
-                    {type.type.name}
-                  </p>
-                ))}
+            <Link
+              className="pokemon-link"
+              key={pokemon.id}
+              to={`/${pokemon.name}`}
+            >
+              <div className="pokemon-card">
+                <span className="pokemon-number">#{pokemon.id}</span>
+                <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+                <h3 className="pokemon-name">{pokemon.name}</h3>
+                <div className="types">
+                  {pokemon.types.map((type) => (
+                    <p
+                      className="type"
+                      key={`${pokemon.name}${type.type.name}`}
+                    >
+                      {type.type.name}
+                    </p>
+                  ))}
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </div>

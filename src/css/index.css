@@ -1,6 +1,10 @@
 @import "./reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap");
 
+html {
+  overflow-y: scroll;
+}
+
 * {
   box-sizing: border-box;
 }
