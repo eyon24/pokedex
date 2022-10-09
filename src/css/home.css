@@ -1,0 +1,44 @@
+.next-prev-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.prev .next {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev {
+  margin-left: 15%;
+}
+
+.next {
+  margin-right: 15%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.n-p-button {
+  height: 100%;
+  width: 100px;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.n-p-button:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}

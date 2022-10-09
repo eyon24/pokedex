@@ -1,0 +1,39 @@
+.search {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  height: 30px;
+  padding: 0 5px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 0.25rem;
+  font-family: inherit;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+button {
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+button span {
+  padding: 0 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}

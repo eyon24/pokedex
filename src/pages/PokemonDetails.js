@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import PokemonBody from "./PokemonBody";
-import useFetchPokemon from "./useFetchPokemon";
+import PokemonBody from "../components/PokemonBody";
+import useFetchPokemon from "../hooks/useFetchPokemon";
 import "../css/pokemondetails.css";
 
 const PokemonDetails = () => {
@@ -51,7 +51,7 @@ const PokemonDetails = () => {
               </div>
             </div>
           </div>
-          <PokemonBody className="pd-body" pokemon={pokemon} />
+          <PokemonBody className="pd-body" pokemon={pokemon.species.url} />
           <div className="pd-stats">
             {pokemon.stats.map((stat) => (
               <div key={stat.stat.name}>

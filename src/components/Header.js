@@ -6,7 +6,7 @@ const Header = () => {
     <nav className="header-container">
       <div className="links">
         <Link className="link" to="/">
-          POKEDEXUSSY
+          POKIEDEX
         </Link>
       </div>
     </nav>
