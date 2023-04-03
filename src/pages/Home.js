@@ -67,8 +67,8 @@ const Home = () => {
           )}
         </div>
       </div>
-      {error && <div>{error}</div>}
-      {isLoading && <div>Loading...</div>}
+      {error && <div className="error">{error}</div>}
+      {isLoading && <div className="loading">Loading...</div>}
       {pokemon && <PokemonList pokemon={pokemon} />}
     </div>
   );
