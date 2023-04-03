@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/pokedex/static/css/main.e858d7bc.css",
+    "main.js": "/pokedex/static/js/main.8d42b559.js",
+    "static/media/crying-pika.gif": "/pokedex/static/media/crying-pika.544dd4360a0b62e06613.gif",
+    "index.html": "/pokedex/index.html",
+    "main.e858d7bc.css.map": "/pokedex/static/css/main.e858d7bc.css.map",
+    "main.8d42b559.js.map": "/pokedex/static/js/main.8d42b559.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e858d7bc.css",
+    "static/js/main.8d42b559.js"
+  ]
+}
